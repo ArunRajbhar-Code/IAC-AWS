@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - main
-      - stage
     paths:
       - terraform/**
   pull_request:
@@ -18,9 +17,8 @@ on:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
+  # BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
   AWS_REGION: ap-south-1
-  EKS_CLUSTER: vprofile-eks
 
 jobs:
   terraform-init:
