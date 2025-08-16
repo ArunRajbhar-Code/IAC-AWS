@@ -1,4 +1,4 @@
-name: "vprofile IAC"
+name: "IAC"
 
 on:
   workflow_dispatch:
